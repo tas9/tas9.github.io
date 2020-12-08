@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  color: #222222;
+}
+
+body {
+  
+}
+
+header {
+  background: #dddddd;
+  padding-top: 128px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 160px;
+  padding-bottom: 12px;
+}
+
+.profile h1 {
+  font-size: 24px;
+  padding-bottom: 8px;
+}
