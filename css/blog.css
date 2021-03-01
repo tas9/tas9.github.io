@@ -30,7 +30,6 @@ main {
   letter-spacing: 2px;
   margin: 0;
   margin-bottom: 16px;
-  padding-left: 12px;
 }
 
 hr {
@@ -39,7 +38,7 @@ hr {
 
 .content-title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 40px;
 }
@@ -128,4 +127,84 @@ footer {
   color: #ffffff;
   font-size: 12px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .page_title {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  
+  hr {
+    width: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .content-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+  .content-images{
+    margin-bottom: 80px;
+  }
+  .content-text ul {
+    padding: 0;
+}
+
+@media (max-width: 400px) {
+  .page_title {
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-bottom: 16px;
+    padding-left: 12px;
+  }
+  hr {
+    width: 12px;
+    margin-bottom: 32px;
+  }
+  .content-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+  .content-images{
+    width: 320px;
+    margin-bottom: 80px;
+  } 
+  .content-images img {
+    width: 320px;
+    margin-bottom: 8px;
+  } 
+  .sub-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sub-image img {
+    width: 320px;
+  }
+  .content-text {
+    width: 320px;
+  }
+  .content-text ul {
+    padding: 0;
+  }
 }
