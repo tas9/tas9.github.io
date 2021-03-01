@@ -36,6 +36,17 @@ TxtRotate.prototype.tick = function() {
     delta = 500;
   }
 
+  // "tasuku"が表示される時だけ文字色を変える
+  if (this.loopNum%2 == 0) {
+    var h1 = document.getElementById("random-text");
+    h1.style.color = '#f5c61d';
+    h1.style.borderBottom = '1px dashed #f5c61d';
+  } else {
+    var h1 = document.getElementById("random-text");
+    h1.style.color = '#c3c3c3';
+    h1.style.borderBottom = '0px dashed #f5c61d';
+  }
+  
   setTimeout(function() {
     that.tick();
   }, delta);
@@ -50,9 +61,17 @@ window.onload = function() {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
+  
+
+  //文字入力or消去中以外の時はカーソルを点滅させる
+  $(function(){
+    setInterval(function(){
+        $('.txt-rotate').toggleClass('flash');
+    },1000);
+  });
   // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
+  // var css = document.createElement("style");
+  // css.type = "text/css";
+  // // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.04em solid #c3c3c3 }";
+  // document.body.appendChild(css);
 };
